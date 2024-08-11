@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .result-container h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .result-container h1 span {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .result-container h1 span.positive {
+            background-color: #e74c3c; /* Red for positive result */
+        }
+
+        .result-container h1 span.negative {
+            background-color: #2ecc71; /* Green for negative result */
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Person is: <span class="{{ 'positive' if result == 'Positive' else 'negative' }}">{{result}}</span></h1>
+    </div>
+</body>
+</html>
